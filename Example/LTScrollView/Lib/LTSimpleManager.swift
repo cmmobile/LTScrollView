@@ -309,4 +309,12 @@
     
  }
  
+ // MARK: 提供給外部設置的方法
+ extension LTSimpleManager {
+    
+    // 設置TitleButton的樣式
+    public func isHiddenRedPointInTitle(in index: Int, isHidden: Bool) {
+        titleView.isHiddenRedPointInTitle(in: index, isHidden: isHidden)
+    }
+ }
  

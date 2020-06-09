@@ -34,7 +34,7 @@ public typealias LTDidSelectTitleViewHandle = (Int) -> Void
     private var layout: LTLayout = LTLayout()
     private var glt_textWidths: [CGFloat] = []
     private var glt_lineWidths: [CGFloat] = []
-    private var glt_buttons: [UIButton] = []
+    private var glt_buttons: [ButtonWithRedDot] = []
     private var glt_currentIndex: Int = 0
     private var isClick: Bool = false
     private var glt_startOffsetX: CGFloat = 0.0
@@ -93,6 +93,14 @@ public typealias LTDidSelectTitleViewHandle = (Int) -> Void
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - public function
+    /// Ttitle加入紅點
+    public func isHiddenRedPointInTitle(in index: Int, isHidden: Bool) {
+        if glt_buttons.indices.contains(index) {
+            glt_buttons[index].isHiddenRedDot = isHidden
+        }
     }
 }
 
@@ -586,8 +594,8 @@ extension LTPageTitleView {
 extension LTPageTitleView {
     
     @discardableResult
-    private func subButton(frame: CGRect, flag: Int, title: String?, parentView: UIView) -> UIButton {
-        let button = UIButton(type: .custom)
+    private func subButton(frame: CGRect, flag: Int, title: String?, parentView: UIView) -> ButtonWithRedDot {
+        let button = ButtonWithRedDot()
         button.frame = frame
         button.tag = flag
         button.setTitle(title, for: .normal)
