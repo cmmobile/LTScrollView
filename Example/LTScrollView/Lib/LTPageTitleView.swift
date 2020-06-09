@@ -34,7 +34,7 @@ public typealias LTDidSelectTitleViewHandle = (Int) -> Void
     private var layout: LTLayout = LTLayout()
     private var glt_textWidths: [CGFloat] = []
     private var glt_lineWidths: [CGFloat] = []
-    private var glt_buttons: [UIButton] = []
+    private var glt_buttons: [ButtonWithRedDot] = []
     private var glt_currentIndex: Int = 0
     private var isClick: Bool = false
     private var glt_startOffsetX: CGFloat = 0.0
@@ -94,6 +94,14 @@ public typealias LTDidSelectTitleViewHandle = (Int) -> Void
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - public function
+    /// Ttitle加入紅點
+    public func isHiddenRedPointInTitle(in index: Int, isHidden: Bool) {
+        if glt_buttons.indices.contains(index) {
+            glt_buttons[index].isHiddenRedDot = isHidden
+        }
+    }
 }
 
 extension LTPageTitleView {
@@ -124,7 +132,7 @@ extension LTPageTitleView {
                     glt_lineWidths.append(60)
                     continue
                 }
-                let textW = text.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 8), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : layout.titleFont ?? UIFont.systemFont(ofSize: 16)], context: nil).size.width
+                let textW = text.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 8), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : layout.titleFont ?? UIFont.systemFont(ofSize: 16)], context: nil).size.width
                 glt_textWidths.append(textW)
                 glt_lineWidths.append(textW)
             }
@@ -144,7 +152,7 @@ extension LTPageTitleView {
                     continue
                 }
             }
-            let textW = text.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 8), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : layout.titleFont ?? UIFont.systemFont(ofSize: 16)], context: nil).size.width
+            let textW = text.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 8), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : layout.titleFont ?? UIFont.systemFont(ofSize: 16)], context: nil).size.width
             if !layout.isAverage {
                 glt_textWidths.append(textW)
             }
@@ -586,8 +594,8 @@ extension LTPageTitleView {
 extension LTPageTitleView {
     
     @discardableResult
-    private func subButton(frame: CGRect, flag: Int, title: String?, parentView: UIView) -> UIButton {
-        let button = UIButton(type: .custom)
+    private func subButton(frame: CGRect, flag: Int, title: String?, parentView: UIView) -> ButtonWithRedDot {
+        let button = ButtonWithRedDot()
         button.frame = frame
         button.tag = flag
         button.setTitle(title, for: .normal)

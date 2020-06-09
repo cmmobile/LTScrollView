@@ -36,6 +36,7 @@
 		6AF10E8A21428EE30007F889 /* LTPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF10E8921428EE20007F889 /* LTPageTitleView.swift */; };
 		6AF10E8D21428F540007F889 /* LTCustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF10E8C21428F540007F889 /* LTCustomTitleView.swift */; };
 		7DB01BDC023018210CF4AAA8 /* Pods_LTScrollView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC587E6DBC111962EA1E447 /* Pods_LTScrollView_Tests.framework */; };
+		957326D9248F756A0076BBF8 /* ButtonWithRedDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957326D8248F756A0076BBF8 /* ButtonWithRedDot.swift */; };
 		C1E38C111D3DA84CBF0CFB43 /* Pods_LTScrollView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1723AE1BCAADA01BFD6E80 /* Pods_LTScrollView_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		6AF10E8921428EE20007F889 /* LTPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTPageTitleView.swift; sourceTree = "<group>"; };
 		6AF10E8C21428F540007F889 /* LTCustomTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCustomTitleView.swift; sourceTree = "<group>"; };
 		6CC587E6DBC111962EA1E447 /* Pods_LTScrollView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTScrollView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		957326D8248F756A0076BBF8 /* ButtonWithRedDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithRedDot.swift; sourceTree = "<group>"; };
 		B1030EA3F060C63BBB220374 /* Pods-LTScrollView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTScrollView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTScrollView_Tests/Pods-LTScrollView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B119E2D80EDE6DCAB9CE1BD8 /* Pods-LTScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTScrollView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTScrollView_Example/Pods-LTScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EE682E1F9E7043F06751A7F5 /* LTScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LTScrollView.podspec; path = ../LTScrollView.podspec; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				6A1A7B87208B072D002D3852 /* LTVCExtension.swift */,
 				6AF10E8721428ED90007F889 /* LTLayout.swift */,
 				6AF10E8921428EE20007F889 /* LTPageTitleView.swift */,
+				957326DA248F75820076BBF8 /* Button */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -285,6 +288,14 @@
 			path = LTCustomTitleView;
 			sourceTree = "<group>";
 		};
+		957326DA248F75820076BBF8 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				957326D8248F756A0076BBF8 /* ButtonWithRedDot.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		B96E7A0BE598A4CDBCA2F0C2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,25 +367,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = U33J5W5C5M;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1130;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = U33J5W5C5M;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1130;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "LTScrollView" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -529,6 +539,7 @@
 				6AF10E8D21428F540007F889 /* LTCustomTitleView.swift in Sources */,
 				6ABD2BA520E679D600473B06 /* LTPageViewTestOneVC.swift in Sources */,
 				6ABD2BA420E679D600473B06 /* LTPageViewDemo.swift in Sources */,
+				957326D9248F756A0076BBF8 /* ButtonWithRedDot.swift in Sources */,
 				6AB5A9F92078C4D10065D6F7 /* LTSimpleManagerDemo.swift in Sources */,
 				6AF10E8821428ED90007F889 /* LTLayout.swift in Sources */,
 				6A1A7B8F208B072D002D3852 /* LTVCExtension.swift in Sources */,
@@ -578,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -586,12 +598,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -619,7 +633,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -631,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -639,12 +654,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -665,7 +682,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -678,15 +695,15 @@
 			baseConfigurationReference = 5590D6C6104CB4044192B0FA /* Pods-LTScrollView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U33J5W5C5M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LTScrollView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -695,15 +712,15 @@
 			baseConfigurationReference = B119E2D80EDE6DCAB9CE1BD8 /* Pods-LTScrollView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U33J5W5C5M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LTScrollView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -725,7 +742,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -743,7 +760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

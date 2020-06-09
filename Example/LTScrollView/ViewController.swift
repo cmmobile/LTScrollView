@@ -95,11 +95,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController {
     
     private func textAttributes(string: String) -> NSAttributedString {
-        var attributes:[NSAttributedStringKey: Any] = [NSAttributedStringKey : Any]()
-        attributes[NSAttributedStringKey.font] = UIFont.systemFont(ofSize: 16)
+        var attributes:[NSAttributedString.Key: Any] = [NSAttributedString.Key : Any]()
+        attributes[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 16)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 3.0
-        attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
+        attributes[NSAttributedString.Key.paragraphStyle] = paragraphStyle
         return NSAttributedString(string: string, attributes: attributes)
     }
 }
